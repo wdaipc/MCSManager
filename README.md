@@ -1,259 +1,345 @@
-<img src="https://public-link.oss-cn-shenzhen.aliyuncs.com/mcsm_picture/logo.png" alt="MCSManager 图标.png" width="500px" />
+<div align="center">
+  <a href="https://mcsmanager.com/" target="_blank">
+    <img src="./frontend/src/assets/logo.png" alt="MCSManagerLogo.png" width="510px" />    
+  </a>
+
+  <br />
+  <br />
+
+[![--](https://img.shields.io/badge/Support%20Platform-Windows/Linux/Mac-green.svg)](https://github.com/MCSManager)
+[![Status](https://img.shields.io/badge/NPM-v8.9.14-blue.svg)](https://www.npmjs.com/)
+[![Status](https://img.shields.io/badge/Node-v22.23.4-blue.svg)](https://nodejs.org/en/download/)
+[![Status](https://img.shields.io/badge/License-Apache%202.0-red.svg)](https://github.com/MCSManager)
+
+<p align="center">
+  <a href="http://mcsmanager.com/"><img alt="Official Website" src="https://img.shields.io/badge/Site-Official Website-yellow"></a>
+  <a href="https://docs.mcsmanager.com/"><img alt="EnglishDocs" src="https://img.shields.io/badge/Docs-English Document-blue"></a>
+  <a href="https://discord.gg/BNpYMVX7Cd"><img alt="Discord" src="https://img.shields.io/badge/Discord-Join Us-5866f4"></a>
+  
+</p>
 
 <br />
 
-[![Status](https://img.shields.io/badge/npm-v6.14.15-blue.svg)](https://www.npmjs.com/)
-[![Status](https://img.shields.io/badge/node-v14.17.6-blue.svg)](https://nodejs.org/en/download/)
-[![Status](https://img.shields.io/badge/License-AGPL-red.svg)](https://github.com/Suwings/MCSManager)
+[English](README.md) - [简体中文](README_ZH.md) - [繁體中文](README_TW.md) - [日本語](README_JP.md) - [Deutsch](README_DE.md) - [Русский](README_RU.md) - [Spanish](README_ES.md) - [Thai](README_TH.md) - [Français](README_FR.md) - [Português BR](README_PTBR.md) - [한국어](README_KO.md)
 
-[官方网站](http://mcsmanager.com/) | [使用文档](https://docs.mcsmanager.com/) | [团队主页](https://github.com/MCSManager) | [面板端项目](https://github.com/MCSManager/MCSManager) | [网页前端项目](https://github.com/MCSManager/UI) | [守护进程项目](https://github.com/MCSManager/Daemon)
+</div>
 
 <br />
 
-## 软件简介
+## What is this?
 
-**分布式，稳定可靠，开箱即用，高扩展性，支持 Minecraft 和其他少数游戏的控制面板。**
+**MCSManager Panel** (or simply **MCSM Panel**) is a fast-deploying, distributed, multi-user, and modern web-based management panel for **`Minecraft`**, **`Steam`**, and other game servers.
 
-MCSManager 面板（简称：MCSM 面板）是一款全中文，轻量级，开箱即用，多实例和支持 Docker 的 Minecraft 服务端管理面板。
+MCSManager has gained popularity within the **`Minecraft`** and **`Steam`** gaming communities. It enables you to manage multiple physical or virtual servers from a single platform, and offers a **secure**, **reliable**, and **granular multi-user permission system**. The MCSM Panel continues to support server administrators, operators, and independent developers, managing servers like **`Minecraft`**, **`Terraria`**, and other **`Steam`**-based games for them.
 
-此软件在 Minecraft 和其他游戏社区内中已有一定的流行程度，它可以帮助你集中管理多个物理服务器，动态在任何主机上创建游戏服务端，并且提供安全可靠的多用户权限系统，可以很轻松的帮助你管理多个服务器。
+**Core features:**
 
-![截图.png](https://public-link.oss-cn-shenzhen.aliyuncs.com/mcsm_picture/MCSM9.png)
+1. Administrators can create Minecraft, Steam, and other game servers (or any other program) based on various templates (or Docker images). Servers can run inside Docker containers or directly as processes, and their terminals can be accessed through the web page.
 
-<br />
+2. Administrators can create regular users and assign instances to them. Through various means such as Docker containers and file permission checks, the control panel ensures that regular users can only access the instances assigned to them, keeping the host machine as secure as possible.
 
-## 运行环境
+MCSManager takes the needs of **commercial applications** into account., such as private server hosting and sales by **IDC service providers**. Several small and medium-sized enterprises already use the panel as a combined **server management** and **sales platform**. In addition, it supports **multi-language environments**, making it accessible to users across different countries and regions.
 
-控制面板可运行在 Windows 与 Linux 平台，无需数据库与任何系统配置，只需安装 node 环境即可快速运行，属于轻量级的 Minecraft 服务端控制面板。
+<img width="1871" height="1342" alt="terminal" src="https://github.com/user-attachments/assets/7f6ed988-e402-4347-94ee-a0469f6658da" />
 
-必须 `Node 14.17.0` 以上，无需数据库和更改任何系统配置，开箱即可运行。
+<img width="1915" height="1386" alt="market" src="https://github.com/user-attachments/assets/fc276180-a826-476a-803e-a038f97115fc" />
 
-<br />
+<img width="3164" height="2060" alt="1" src="https://github.com/user-attachments/assets/570d2447-66dc-4c0b-b2d2-4c3176b51d67" />
 
-## 配置/数据文件
-
-配置文件： `data/SystemConfig/config.json`
-
-用户数据文件：`data/User/*.json`
-
-远程守护进程配置：`data/RemoteServiceConfig/*.json`
-
-面板默认访问账号：`root` `123456`
+<img width="3164" height="2060" alt="3" src="https://github.com/user-attachments/assets/2722cf9f-de9b-4630-b0ea-c00283791d8d" />
 
 <br />
 
-## 软件使用文档
+## Features
 
-地址：[https://docs.mcsmanager.com/](https://docs.mcsmanager.com/)
-
-> 文档正在不断完善，里面的内容还有瑕疵，暂且仅供参考。
-
-> 旧版 `8.X` 文档与 API 备份在[此处](https://github.com/MCSManager/Backup-v8.7/wiki/API-Documentation)。
-
-<br />
-
-## 在 Windows 运行
-
-对于 Windows 系统，**已整合成直接运行版本，下载即可运行**（使用管理员权限运行）:
-
-前往：[https://mcsmanager.com/](https://mcsmanager.com/)
+1. One-click deployment of **`Minecraft`** or **`Steam`** game servers via the built-in application marketplace.
+2. Compatible with most **`Steam`**-based game servers, including **`Palworld`**, **`Squad`**, **`Project Zomboid`**, **`Terraria`**, and more.
+3. Customizable web interface with drag-and-drop card layout to build your ideal dashboard.
+4. Full **Docker Hub** image support, with built-in multi-user access and support for commercial instance hosting services.
+5. Distributed architecture, managing multiple machines from a single web panel.
+6. Lightweight technology stack. The entire project can be developed and maintained with TypeScript alone.
+7. ...and much more.
 
 <br />
 
-## 在 Linux 运行
+## Runtime Environment
 
-**一行命令快速安装**
+The control panel runs on both **`Windows`** and **`Linux`** platforms. No database installation is required. Simply install the **`Node.js`** runtime and a few basic **decompression utilities**.
+
+> Requires **[Node.js 22.23.4](https://nodejs.org/en)** or higher.
+> It is recommended to use the **latest LTS version** for best compatibility and stability.
+
+<br />
+
+## Official Documentation
+
+English: https://docs.mcsmanager.com/
+
+Chinese: https://docs.mcsmanager.com/zh_cn/
+
+<br />
+
+## Installation
+
+### Windows
+
+**For Windows systems, it comes as a ready-to-run integrated version - download and run it immediately.**
+
+Archive: https://download.mcsmanager.com/mcsmanager_windows_release.zip
+
+Double-click `start.bat` to launch both the web panel and daemon process.
+
+<br />
+
+### Linux
+
+**One-line command quick installation**
 
 ```bash
-wget -qO- https://gitee.com/mcsmanager/script/raw/master/setup.sh | bash
+sudo su -c "wget -qO- https://script.mcsmanager.com/setup.sh | bash"
 ```
 
-- 脚本仅适用于 AMD64 架构 Ubuntu/Centos/Debian/Archlinux）
-- 执行完成后，使用 `systemctl start mcsm-{web,daemon}` 即可启动面板服务。
-- 面板代码与运行环境自动安装在 `/opt/mcsmanager/` 目录下。
+**Usage after installation**
+
+```bash
+systemctl start mcsm-{web,daemon} # Start panel
+systemctl stop mcsm-{web,daemon}  # Stop panel
+```
+
+- Script only applies to Ubuntu/Centos/Debian/Archlinux
+- Panel code and runtime environment are automatically installed in the `/opt/mcsmanager/` directory.
 
 <br />
 
-**Linux 手动安装**
+**Linux Manual Installation**
 
-- 若一键安装不起作用，则可以尝试此步骤手动安装。
+- If the one-click installation method doesn't work, you can install MCSManager manually by following the steps below:
 
 ```bash
-# 切换到安装目录，没有此目录请执行 mkdir /opt/
+# Step 1: Navigate to the installation directory (create it if it doesn't exist)
 cd /opt/
-# 下载运行环境（已有 Node 14+ 可忽略）
-wget https://npmmirror.com/mirrors/node/v14.17.6/node-v14.17.6-linux-x64.tar.gz
-# 解压文件
-tar -zxvf node-v14.17.6-linux-x64.tar.gz
-# 链接程序到环境变量中
-ln -s /opt/node-v14.17.6-linux-x64/bin/node /usr/bin/node
-ln -s /opt/node-v14.17.6-linux-x64/bin/npm /usr/bin/npm
 
-# 准备安装目录
+# Step 2: (Optional) Download and install Node.js if it's not already installed
+wget https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.xz
+tar -xvf node-v22.23.4-linux-x64.tar.xz
+
+# Add Node.js and npm to the system path
+ln -s /opt/node-v22.23.4-linux-x64/bin/node /usr/bin/node
+ln -s /opt/node-v22.23.4-linux-x64/bin/npm /usr/bin/npm
+
+# Step 3: Prepare the MCSManager installation directory
 mkdir /opt/mcsmanager/
 cd /opt/mcsmanager/
 
-# 下载面板端（Web）程序
-git clone https://github.com/MCSManager/MCSManager-Web-Production.git
-# 重命名文件夹并进入
-mv MCSManager-Web-Production web
-cd web
-# 安装依赖库
-npm install --registry=https://registry.npmmirror.com/
-cd /opt/mcsmanager/
-# 下载守护进程（Daemon）程序
-git clone https://github.com/MCSManager/MCSManager-Daemon-Production.git
-# 重命名文件夹并进入
-mv MCSManager-Daemon-Production daemon
-cd daemon
-# 安装依赖库
-npm install --registry=https://registry.npmmirror.com/
+# Step 4: Download the latest MCSManager release
+wget https://github.com/MCSManager/MCSManager/releases/latest/download/mcsmanager_linux_release.tar.gz
+tar -zxf mcsmanager_linux_release.tar.gz
 
+# Step 5: Install dependencies
+chmod 775 install.sh
+./install.sh
 
-# 打开两个终端或两个 Screen 软件的终端窗口
-# 先启动守护进程
-cd /opt/mcsmanager/daemon
-# 启动
-node app.js
+# Step 6: Open two terminal windows or use screen/tmux
 
-# 然后启动面板端进程
-cd /opt/mcsmanager/web
-# 启动
-node app.js
+# In the first terminal: start the daemon
+./start-daemon.sh
 
-# 访问 http://localhost:23333/ 即可进入面板。
-# 默认情况下，面板端会自动扫描 daemon 文件夹并且自动连接到守护进程。
+# In the second terminal: start the web service
+./start-web.sh
+
+# Step 7: Access the panel in your browser
+# Replace <public IP> with your server's actual IP address
+http://<public IP>:23333/
+
+# The web interface will automatically detect and connect to the local daemon in most cases.
 ```
 
-- 注意，这种安装方式不会自动注册面板到系统服务（Service），所以必须使用 `screen` 软件来管理。
+> The above steps do **not** register the panel as a system service.  
+> To keep it running in the background, you’ll need to use tools like **`screen`** or **`tmux`**.
+
+If you prefer to run MCSManager as a system service, please refer to the official documentation for setup instructions.
 
 <br />
 
-## 更新版本
-
-如果您想从 `8.X` 版本更新到 `9.X` 版本，这是不支持的，只能手动一个个导入实例配置和文件。
-
-如果您是 `9.X` 升级到更高版本，在 `Linux` 系统下，请分别前往 `/opt/mcsmanager/web`，`/opt/mcsmanager/daemon` 目录中执行 `git pull` 进行更新。
-
-在 `Windows` 系统下更新请前往官方下载最新安装包，覆盖所有文件即可生效。
-
-> 注意，建议更新前备份一次 `data` 目录。
-
-<br />
-
-
-## 项目体系
-
-整个软件运行需要三个项目的互相配合才可运行，您普通安装的代码是编译再整合后的产物。
-
-[**控制面板端**](https://github.com/MCSManager/MCSManager)
-
-- 角色：控制中心
-- 责任：负责提供网页前端的后端接口，提供API接口，用户数据管理和对守护进程进行通信和授权。
- 
-[**网页前端**](https://github.com/MCSManager/UI)
-
-- 角色：控制中心的用户交互界面
-- 责任：以网页形式展示数据，发送请求，并且拥有与守护进程通信的能力，此项目最终产物是纯静态文件。
- 
-[**守护进程**](https://github.com/MCSManager/Daemon)
-
-- 角色：被控端
-- 责任：控制本地主机的所有实例，真实进程的实际管理者，拥有与任何对象的通信能力。
-
-<br />
-
-## 搭建开发环境
-
-此段落面向开发人员，普通用户无需关注也无需执行。
-
-所有项目全部以开发环境运行后，便可以进行开发与预览，请务必遵循开源协议。
-
-**控制面板端（MCSManager）**
+### Mac OS
 
 ```bash
-git clone https://github.com/MCSManager/MCSManager.git
-cd MCSManager
-npm install
-npm run start 
-# 默认将采用 ts-node 直接执行 Typescript 代码
-# 默认运行在 23333 端口
+
+# Step 1: Install Node.js (skip if already installed)
+# It's recommended to use the latest LTS version
+brew install node
+node -v
+npm -v
+
+# Step 2: Download the latest release using curl
+curl -L https://github.com/MCSManager/MCSManager/releases/latest/download/mcsmanager_linux_release.tar.gz -o mcsmanager_linux_release.tar.gz
+
+# Step 3: Extract the downloaded archive
+tar -zxf mcsmanager_linux_release.tar.gz
+
+# Step 4: Enter the extracted directory
+cd mcsmanager
+
+# Step 5: Make the installer executable and run it
+chmod 775 install.sh
+./install.sh
+
+# Step 6: Open two terminal windows or use screen/tmux to run services in parallel
+
+# In the first terminal: start the daemon
+./start-daemon.sh
+
+# In the second terminal: start the web service
+./start-web.sh
+
+# Access the panel at: http://localhost:23333/
+# The web interface will typically auto-detect and connect to the local daemon.
 ```
 
-**网页前端（UI）**
+<br />
+
+### Docker Installation
+
+Install the panel using docker-compose.yml, note that you need to modify all `<CHANGE_ME_TO_INSTALL_PATH>` in it to your actual installation directory.
+
+```yml
+services:
+  web:
+    image: githubyumao/mcsmanager-web:latest
+    ports:
+      - "23333:23333"
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - <CHANGE_ME_TO_INSTALL_PATH>/web/data:/opt/mcsmanager/web/data
+      - <CHANGE_ME_TO_INSTALL_PATH>/web/logs:/opt/mcsmanager/web/logs
+      - <CHANGE_ME_TO_INSTALL_PATH>/web/public/upload_files:/opt/mcsmanager/web/public/upload_files
+
+  daemon:
+    image: githubyumao/mcsmanager-daemon:latest
+    restart: unless-stopped
+    ports:
+      - "24444:24444"
+    environment:
+      - MCSM_DOCKER_WORKSPACE_PATH=<CHANGE_ME_TO_INSTALL_PATH>/daemon/data/InstanceData
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - <CHANGE_ME_TO_INSTALL_PATH>/daemon/data:/opt/mcsmanager/daemon/data
+      - <CHANGE_ME_TO_INSTALL_PATH>/daemon/logs:/opt/mcsmanager/daemon/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+```
+
+Note (Rootless Docker on Linux): the daemon supports `DOCKER_HOST`. If your Docker daemon runs in rootless mode, the socket is usually at `/run/user/<uid>/docker.sock` instead of `/var/run/docker.sock`. In that case, replace the default socket mount with the rootless socket and set `DOCKER_HOST`, for example:
+
+```yml
+daemon:
+  environment:
+    - DOCKER_HOST=unix:///run/user/1000/docker.sock
+  volumes:
+    - /run/user/1000/docker.sock:/run/user/1000/docker.sock
+```
+
+Replace `1000` with your actual UID (`id -u`).
+
+Enable using docker-compose.
 
 ```bash
-git clone https://github.com/MCSManager/UI.git
-cd UI
-npm install
-npm run serve
-# 访问 http://localhost:8080/ 即可预览界面
-# 所有 API 请求将自动转发到 23333 端口
+mkdir -p <CHANGE_ME_TO_INSTALL_PATH>
+cd <CHANGE_ME_TO_INSTALL_PATH>
+vim docker-compose.yml # Write the above docker-compose.yml content here
+docker compose pull && docker compose up -d
 ```
 
-**守护进程（Daemon）**
+Note: After Docker installation, the Web side may no longer be able to automatically connect to the Daemon.
 
-```bash
-git clone https://github.com/MCSManager/Daemon.git
-cd Daemon
-npm install
-npm run start
-# 运行后请在控制面板端连接本守护进程
-# 默认运行在 24444 端口
-```
-
+At this point, if you enter the panel, you should see some errors because the Web side has not successfully connected to the daemon side, you need to create a new node to connect them together.
 
 <br />
 
-## 浏览器兼容性
+## Contributing Code
 
-- 支持 `Chrome` `Firefox` `Safari` `Opera` 等现代主流浏览器。
-- 已放弃支持 `IE` 浏览器。
+Before contributing code to this project, please make sure to review the following:
 
-<br />
+- **Must read:** [Issue #599 – Contribution Guidelines](https://github.com/MCSManager/MCSManager/issues/599)
+- Please maintain the existing code structure and formatting, **do not apply unnecessary or excessive formatting changes.**
+- All submitted code **must follow internationalization (i18n) standards**.
 
-## 面板权限
+### Bug Reports
 
-控制面板在运行时会检测用户是否为空，若为空会自动创建一个默认的管理员账号。
+We welcome all bug reports and feedback. Your contributions help us improve the project.
 
-如果您忘记了管理员账号，您只能备份现有的用户配置文件夹，并且重新生成一个新的管理员账号以覆盖。
+If you encounter any issues, please report them via the [GitHub Issues](https://github.com/MCSManager/MCSManager/issues) page, and we’ll address them as soon as possible.
 
-<br />
+For serious **security vulnerabilities** that should not be disclosed publicly, please contact us directly at: **support@mcsmanager.com**
 
-## 贡献
+Once resolved, we will credit the discoverer in the relevant code or release notes.
 
-如果你在使用过程中发现任何问题，可以 [提交 Issue](https://github.com/MCSManager/MCSManager/issues/new/choose) 或自行 Fork 修改后提交 Pull Request。
+### Acknowledgements
 
-代码需要保持现有格式，不得格式化多余代码，具体可[参考这里](https://github.com/MCSManager/MCSManager/issues/544)。
+Thanks to the following developers for making important contributions to the security testing of MCSManager!
 
-<br />
-
-## 问题报告
-
-欢迎发现的任何问题进行反馈，必当及时修复。
-
-若发现严重安全漏洞又不便公开发布，请发送邮件至: Suwings@outlook.com，安全问题修复后将在代码中附加漏洞发现者姓名。
+> [@Cuo256](https://github.com/Cuo256), [@xiaosu](https://github.com/xiaosuawa), [@tianjiefeifei](https://github.com/tianjiefeifei), [9Bakabaka](https://github.com/9Bakabaka), [Yudai Shibata](https://github.com/yudai-shibata), Javier García Herrera
 
 <br />
 
-## 版权约束
+## Development
 
-此开源项目使用 [AGPL 协议](LICENSE) 作为开源协议，未经过官方闭源开发授权，您如果对代码有任何修改，则必须要公开您修改后的源代码，具体约束如下。
+### Project Structure
 
-**准许**
+The project comprises three core modules:
 
-- 对软件源代码进行修改，复制，分发。
-- 利用软件进行商业使用，赚取利润。
+- Daemon backend (`daemon` directory)
+- Web backend (`panel` directory)
+- Web frontend (`frontend` directory)
 
-**必须**
+**Web Backend Responsibilities:**
 
-- 公开提供您修改后的完整源代码。
-- 在代码文件、界面中保留版权声明。
+- User management
+- Node connectivity
+- Authentication and authorization
+- API services
 
-**禁止**
+**Daemon Backend Responsibilities:**
 
-- 禁止售卖此软件，申请专利，著作权等。
+- Process management for server instances
+- Docker container operations
+- File system management
+- Real-time terminal access
 
-> 更多授权与版权约束详情，请前往官方网站界面了解更多。
+**Web Frontend Responsibilities:**
+
+- User interface implementation
+- Web backend integration
+- Direct node communication for optimized performance
+
+### Setting Up Development Environment
+
+See: [DEVELOPMENT.md](./DEVELOPMENT.md)
 
 <br />
+
+## Browser Compatibility
+
+MCSManager supports all major modern browsers, including:
+
+- `Chrome`
+- `Firefox`
+- `Safari`
+- `Opera`
+
+**Internet Explorer (IE)** is no longer supported.
+
+<br />
+
+## Contributors
+
+<a href="https://openomy.com/MCSManager/MCSManager" target="_blank" style="display: block; width: 100%;" align="center">
+  <img src="https://openomy.com/svg?repo=MCSManager/MCSManager&chart=bubble&latestMonth=12" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
+</a>
+
+## License
+
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+&copy; 2025 MCSManager. All rights reserved.
